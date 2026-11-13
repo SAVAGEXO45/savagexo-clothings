@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, Cambria, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    --color-alabaster: #F7F5F0;
+    --color-travertine: #EFECE6;
+    --color-sandstone: #E2DDD3;
+    --color-obsidian: #0E0E0E;
+    --color-charcoal: #1C1C1C;
+    --color-terracotta: #B85435;
+    --color-terracotta-dark: #963E23;
+    --color-champagne: #C9A96E;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: #F7F5F0;
+        color: #0E0E0E;
+        font-family: var(--font-sans);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .font-editorial {
+        font-family: var(--font-serif);
+        letter-spacing: -0.02em;
+    }
+
+    .font-mono-tech {
+        font-family: var(--font-mono);
+    }
+}
+
+/* Custom Editorial Animations & Transitions */
+.editorial-image-zoom {
+    overflow: hidden;
+}
+
+.editorial-image-zoom img {
+    transition: transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-image-zoom:hover img {
+    transform: scale(1.045);
+}
+
+/* Luxury Button Styles */
+.btn-savage-primary {
+    background-color: #0E0E0E;
+    color: #F7F5F0;
+    border: 1px solid #0E0E0E;
+    transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-savage-primary:hover {
+    background-color: #B85435;
+    border-color: #B85435;
+    color: #FFFFFF;
+}
+
+.btn-savage-accent {
+    background-color: #B85435;
+    color: #FFFFFF;
+    border: 1px solid #B85435;
+    transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-savage-accent:hover {
+    background-color: #0E0E0E;
+    border-color: #0E0E0E;
+    color: #FFFFFF;
+}
+
+.btn-savage-outline {
+    background-color: transparent;
+    color: #0E0E0E;
+    border: 1px solid #0E0E0E;
+    transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-savage-outline:hover {
+    background-color: #0E0E0E;
+    color: #F7F5F0;
+}
+
+/* Hairline Architectural Borders */
+.border-hairline {
+    border-color: #E2DDD3;
+}
+
+[x-cloak] {
+    display: none !important;
+}
